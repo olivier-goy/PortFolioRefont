@@ -1,20 +1,25 @@
 .nav {
-  z-index: 1;
-  position: fixed;
+  z-index: 1000;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: #262626;
+  background-color: #20212B;
+  opacity: 90%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
 }
+
 .iconHeader {
   flex: 2;
   margin-left: 20px;
 }
+
 .iconHeader img {
   width: 65px;
 }
+
 .navHeader {
   flex: 1.5;
   width: 100%;
@@ -24,6 +29,7 @@
   font-size: 12px;
   font-weight: 900;
 }
+
 .active {
   text-decoration: none;
   color: #262626;
@@ -35,6 +41,7 @@
   height: 100%;
   cursor: default;
 }
+
 .pending {
   text-decoration: none;
   color: #94d25a;
@@ -45,25 +52,32 @@
   height: 100%;
   cursor: pointer;
 }
+
 .pending:hover {
   background-color: grey;
 }
+
 .pending:active {
   background-color: #ffffff;
 }
+
 .displayMenu {
   display: none;
 }
+
 .menuRespondsive {
   display: block;
 }
+
 .iconMenuRespondsive {
   position: relative;
 }
+
 .innerMenu {
   z-index: 1;
   display: none;
 }
+
 .linkMenu {
   text-align: center;
   display: flex;
@@ -81,37 +95,46 @@
     font-size: 11px;
   }
 }
+
 @media (max-width: 1300px) {
   .nav {
     height: 60px;
   }
+
   .iconHeader img {
     width: 50px;
   }
+
   .navHeader {
     font-size: 10px;
   }
 }
+
 @media (max-width: 1200px) {
   .navHeader {
     font-size: 9px;
   }
 }
+
 @media (max-width: 1050px) {
   .nav {
     height: 50px;
   }
+
   .iconHeader img {
     width: 40px;
   }
+
   .navHeader {
     font-size: 8px;
   }
 }
+
 @media (max-width: 950px) {
   .navHeader {
     font-size: 12px;
   }
+
   .innerMenu {
     border-left: solid 2px #262626;
     display: block;
@@ -122,51 +145,64 @@
     width: 30%;
     height: auto;
   }
+
   .pending {
     display: none;
     width: 20%;
   }
+
   .linkMenu:hover {
     background-color: grey;
   }
+
   .linkMenu:active {
     background-color: #ffffff;
   }
+
   .pendingResponsive {
     color: #94d25a;
     text-decoration: none;
     text-align: center;
   }
+
   .displayMenu {
     display: flex;
   }
 }
+
 @media (max-width: 700px) {
   .navHeader {
     font-size: 10px;
   }
+
   .pending {
     display: none;
     width: 25%;
   }
+
   .displayMenu {
     display: flex;
   }
 }
+
 @media (max-width: 500px) {
   .navHeader {
     font-size: 9px;
   }
+
   .pending {
     display: none;
     width: 30%;
   }
+
   .displayMenu {
     display: flex;
   }
+
   .innerMenu {
     width: 35%;
   }
+
   .linkMenu {
     font-size: 12px;
   }
