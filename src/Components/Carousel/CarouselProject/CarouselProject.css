@@ -1,0 +1,78 @@
+.carouselProject {
+  margin: 90px 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carouselProjectPrev {
+  flex: 1 5%;
+  cursor: pointer;
+  text-align: right;
+}
+.carouselProjectPrev img {
+  opacity: 0.6;
+  width: 60%;
+  height: auto;
+}
+.carouselProjectMain {
+  flex: 1 60%;
+  display: flex;
+  gap: 25px;
+}
+.carouselProjectNext {
+  flex: 1 5%;
+  cursor: pointer;
+}
+.carouselProjectNext img {
+  opacity: 0.6;
+  width: 60%;
+  height: auto;
+}
+
+@media (max-width: 1600px) {
+  .carouselProjectMain {
+    gap: 15px;
+  }
+}
+@media (max-width: 1500px) {
+  .carouselProjectMain {
+    gap: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .carouselProjectMain {
+    flex: 1 40%;
+    gap: 0;
+  }
+  .carouselProjectPrev img {
+    width: 40%;
+  }
+  .carouselProjectNext img {
+    width: 40%;
+  }
+}
+@media (max-width: 650px) {
+  .carouselProjectMain {
+    flex: 1 65%;
+    gap: 0;
+  }
+  .carouselProjectPrev img {
+    width: 50%;
+  }
+  .carouselProjectNext img {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .carouselProjectMain {
+    flex: 1 80%;
+    gap: 0;
+  }
+  .carouselProjectPrev img {
+    width: 100%;
+  }
+  .carouselProjectNext img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,105 @@
+.banner{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.innerBanner {
+  flex: 1;
+  display: flex;
+  margin-top: 80px;
+}
+.sectionImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-filter: drop-shadow(0 0 20px #262626);
+  filter: drop-shadow(0 0 20px #262626);
+}
+.sectionImage img {
+  width: 55%;
+  height: auto;
+  clip-path: ellipse(50% 38%);
+}
+.sectionTitle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+h1 {
+  padding: 10%;
+  font-size: 50px;
+}
+.cursor {
+    display: inline-block;
+    animation: blink 1s steps(2, start) infinite;
+}
+.iconBanner { 
+  text-align: center;
+  margin-bottom: 5px;
+  -webkit-animation: 5s animationIcon infinite;
+  animation: 5s animationIcon infinite;
+}
+.iconBanner p {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes animationIcon {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 950px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .innerBanner {
+    flex-direction: column;
+  }
+  .sectionImage img {
+    width: 41%;
+  }
+  .sectionTitle {
+    text-align: center;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .sectionImage img {
+    width: 60%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
