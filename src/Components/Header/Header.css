@@ -1,16 +1,17 @@
 .nav {
   width: 100%;
   height: 90px;
-  background-color: #20212B;
-  opacity: 90%;
+  background-color: rgba(32, 33, 43, 0.9);
   display: flex;
   align-items: center;
+  padding: 0 100px;
 }
+
+/* Logo */
 
 .iconHeader {
   color: #E040FB;
   flex: 2;
-  margin-left: 20px;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -19,59 +20,62 @@
 .iconCode {
   border: 5px solid #E040FB;
   border-radius: 50%;
-  padding: 12px;
+  padding: 11px;
 }
 
 .logoText {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 45px;
   font-weight: 700;
+  line-height: 1;
 }
 
-.iconHeader img {
-  width: 65px;
-}
+/* Navigation */
 
 .navHeader {
   flex: 1.5;
-  width: 100%;
   height: 100%;
-  justify-content: flex-end;
   display: flex;
-  font-size: 12px;
-  font-weight: 900;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.active,
+.pending {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 12px 30px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
 .active {
-  text-decoration: none;
-  color: #262626;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  background-color: #9649DF;
   cursor: default;
 }
 
+.active:hover {
+  background-color: #A448F3;
+}
+
 .pending {
-  text-decoration: none;
-  color: #94d25a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
   cursor: pointer;
 }
 
 .pending:hover {
-  background-color: grey;
+  background-color: #A448F3;
 }
 
-.pending:active {
-  background-color: #ffffff;
-}
+/* Menu responsive */
 
 .displayMenu {
   display: none;
@@ -86,7 +90,7 @@
 }
 
 .innerMenu {
-  z-index: 1;
+  z-index: 1001;
   display: none;
 }
 
@@ -96,11 +100,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #94d25a;
+  color: #FFFFFF;
   text-decoration: none;
   height: 100px;
-  font-weight: 900;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
 }
+
+/* Responsive */
 
 @media (max-width: 1500px) {
   .navHeader {
@@ -117,8 +124,18 @@
     width: 50px;
   }
 
+  .logoText {
+    font-size: 32px;
+  }
+
   .navHeader {
     font-size: 10px;
+    gap: 8px;
+  }
+
+  .active,
+  .pending {
+    padding: 8px 12px;
   }
 }
 
@@ -137,8 +154,23 @@
     width: 40px;
   }
 
+  .logoText {
+    font-size: 26px;
+  }
+
+  .iconCode {
+    border-width: 3px;
+    padding: 8px;
+  }
+
   .navHeader {
     font-size: 8px;
+    gap: 5px;
+  }
+
+  .active,
+  .pending {
+    padding: 6px 8px;
   }
 }
 
@@ -148,31 +180,30 @@
   }
 
   .innerMenu {
-    border-left: solid 2px #262626;
+    border-left: solid 2px #9649DF;
     display: block;
     top: 50px;
     right: 0;
     position: fixed;
-    background-color: #262626;
+    background-color: #20212B;
     width: 30%;
     height: auto;
   }
 
   .pending {
     display: none;
-    width: 20%;
   }
 
   .linkMenu:hover {
-    background-color: grey;
+    background-color: #A448F3;
   }
 
   .linkMenu:active {
-    background-color: #ffffff;
+    background-color: #9649DF;
   }
 
   .pendingResponsive {
-    color: #94d25a;
+    color: #FFFFFF;
     text-decoration: none;
     text-align: center;
   }
@@ -187,11 +218,6 @@
     font-size: 10px;
   }
 
-  .pending {
-    display: none;
-    width: 25%;
-  }
-
   .displayMenu {
     display: flex;
   }
@@ -200,11 +226,6 @@
 @media (max-width: 500px) {
   .navHeader {
     font-size: 9px;
-  }
-
-  .pending {
-    display: none;
-    width: 30%;
   }
 
   .displayMenu {
@@ -217,5 +238,15 @@
 
   .linkMenu {
     font-size: 12px;
+    height: 70px;
+  }
+
+  .iconHeader {
+    gap: 10px;
+    margin-left: 12px;
+  }
+
+  .logoText {
+    font-size: 22px;
   }
 }

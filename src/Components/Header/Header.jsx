@@ -19,7 +19,6 @@ function Header() {
               <span className="logoText">OG.dev</span>
             </div>
             <div className="navHeader">
-              <div className="pending">
                 <NavLink
                   to="/"
                   className={({ isActive, isPending }) =>
@@ -27,23 +26,22 @@ function Header() {
                   }
                   reloadDocument
                 >
-                  ACCUEIL
+                  Accueil
                 </NavLink>
-              </div>
-              <a href="#skills" className="pending">
-                COMPETENCE
-              </a>
               <a href="#realizations" className="pending">
-                REALISATIONS
+                Réalisations
+              </a>
+              <a href="#skills" className="pending">
+                Compétences
               </a>
               <a href="#abouts" className="pending">
-                A-PROPOS
+                A propos
               </a>
               <a href={cv} target="_blank" rel="noreferrer" className="pending">
-                MON CV
+                Mon CV
               </a>
               <a href="mailto:contact@oliviergoy.dev" className="pending">
-                CONTACT
+                Contact
               </a>
               <div
                 onClick={() => setIsOpenMenu(!isOpenMenu)}
