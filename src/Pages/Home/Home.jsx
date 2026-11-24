@@ -48,6 +48,15 @@ function Home() {
 
       <section id="home">{isDataLoading && <Banner />}</section>
 
+      <section id="realizations">
+        {isDataLoading && (
+          <div className="sectionRealization">
+            <h2>MES REALISATIONS</h2>
+            <CarouselProject realizations={isRealizationData} />
+          </div>
+        )}
+      </section>
+
       <section id="skills">
         {isDataLoading && (
           <div className="skillSection">
@@ -64,15 +73,6 @@ function Home() {
                 />
               ))}
             </div>
-          </div>
-        )}
-      </section>
-
-      <section id="realizations">
-        {isDataLoading && (
-          <div className="sectionRealization">
-            <h2>MES REALISATIONS</h2>
-            <CarouselProject realizations={isRealizationData} />
           </div>
         )}
       </section>
