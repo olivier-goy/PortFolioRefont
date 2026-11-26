@@ -1,9 +1,13 @@
 /* import { useState, useEffect } from "react"; */
 /* import { faArrowDown } from "@fortawesome/free-solid-svg-icons"; */
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons"
+import cv from "../../Assets/CV_Olivier_GOY_Développeur_Fullstack.pdf";
 import "./Banner.css";
 
 function Presentation() {
- /*  const lines = [
+  /*  const lines = [
     "Bonjour et bienvenue,",
     "Je suis Olivier GOY",
     "Développeur web Fullstack",
@@ -65,7 +69,20 @@ function Presentation() {
           {/* <span dangerouslySetInnerHTML={{ __html: text }}></span>
             <span className="cursor">|</span> */}
         </h1>
-        <p className="bannerDescription">Je conçois des applications web modernes, performantes et ergonomiques, du front-end au back-end.</p>
+        <p className="bannerDescription">
+          Je conçois des applications web modernes, performantes et
+          ergonomiques, du front-end au back-end.
+        </p>
+        <div className="bannerLink">
+          <a href="mailto:contact@oliviergoy.dev" className="btnContact">
+            <FontAwesomeIcon icon={faEnvelope} />
+            Me contacter
+          </a>
+          <a href={cv} target="_blank" rel="noreferrer" className="btnCV">
+            <FontAwesomeIcon icon={faDownload} />
+            Mon CV
+          </a>
+        </div>
       </div>
     </div>
   );

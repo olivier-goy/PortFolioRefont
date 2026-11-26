@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCode } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import cv from "../../Assets/CV_Olivier_GOY_Développeur_Fullstack.pdf";
 
