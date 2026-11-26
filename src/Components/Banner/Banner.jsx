@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import imageProfil from "../../Assets/Photo-de-profil.webp";
+/* import { useState, useEffect } from "react"; */
+/* import { faArrowDown } from "@fortawesome/free-solid-svg-icons"; */
 import "./Banner.css";
 
 function Presentation() {
-  const lines = [
+ /*  const lines = [
     "Bonjour et bienvenue,",
     "Je suis Olivier GOY",
     "Développeur web Fullstack",
@@ -24,7 +22,7 @@ function Presentation() {
     const currentLine = lines[lineIndex];
     const currentChar = currentLine.charAt(charIndex);
 
-    // Couleur : première ligne noire, reste gris
+    
     const color = lineIndex === 0 ? "black" : "gray";
 
     setText(
@@ -53,27 +51,21 @@ function Presentation() {
 
     return () => clearTimeout(timeout);
     // eslint-disable-next-line
-  }, [lineIndex, charIndex]);
+  }, [lineIndex, charIndex]); */
 
   return (
     <div className="banner">
-      <div className="innerBanner">
-        <div className="sectionImage">
-          <img
-            src={imageProfil}
-            alt="Représentation profil Olivier GOY développeur web"
-          />
-        </div>
-        <div className="sectionTitle">
-          <h1>
-            <span dangerouslySetInnerHTML={{ __html: text }}></span>
-            <span className="cursor">|</span>
-          </h1>
-        </div>
-      </div>
-      <div className="iconBanner">
-        <p>Poursuivre</p>
-        <FontAwesomeIcon icon={faArrowDown} size="2x" />
+      <div className="sectionBannerPresentation">
+        <p className="bannerGreeting">BONJOUR, JE SUIS</p>
+        <h1>
+          <span className="bannerName">
+            Olivier <span className="bannerLastName">GOY</span>
+          </span>
+          <span className="bannerJob">Développeur logiciel & web</span>
+          {/* <span dangerouslySetInnerHTML={{ __html: text }}></span>
+            <span className="cursor">|</span> */}
+        </h1>
+        <p className="bannerDescription">Je conçois des applications web modernes, performantes et ergonomiques, du front-end au back-end.</p>
       </div>
     </div>
   );

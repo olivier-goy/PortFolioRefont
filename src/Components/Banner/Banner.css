@@ -1,62 +1,58 @@
 .banner {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-image: url("../../Assets/hero-bureau-violet.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 500px;
+  min-height: 85vh;
 }
 
-.innerBanner {
-  flex: 1;
-  display: flex;
-  margin-top: 80px;
+.bannerGreeting {
+  color: #A448F3;
+  font-size: 25px;
+  font-weight: 600;
 }
 
-.sectionImage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-filter: drop-shadow(0 0 20px #262626);
-  filter: drop-shadow(0 0 20px #262626);
-}
-
-.sectionImage img {
-  width: 55%;
-  height: auto;
-  clip-path: ellipse(50% 38%);
-}
-
-.sectionTitle {
-  flex: 1;
-  display: flex;
-  align-items: center;
+.sectionBannerPresentation {
+  padding: 0 100px;
+  width: 50%;
 }
 
 h1 {
-  padding: 10%;
+  line-height: 1.1;
+}
+
+.bannerName,
+.bannerJob {
+  display: block;
+}
+
+.bannerName {
+  font-size: 80px;
+}
+
+.bannerJob {
   font-size: 50px;
+  font-weight: 700;
+}
+
+.bannerLastName {
+  color: #A448F3;
+  font-style: italic;
+}
+
+.bannerDescription {
+  margin: 20px 0;
+  font-size: 30px;
+  line-height: 1.2;
 }
 
 .cursor {
   display: inline-block;
   animation: blink 1s steps(2, start) infinite;
-}
-
-.iconBanner {
-  text-align: center;
-  margin-bottom: 5px;
-  -webkit-animation: 5s animationIcon infinite;
-  animation: 5s animationIcon infinite;
-}
-
-.iconBanner p {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 5px;
 }
 
 @keyframes blink {
@@ -102,15 +98,7 @@ h1 {
 }
 
 @media (max-width: 700px) {
-  .innerBanner {
-    flex-direction: column;
-  }
-
-  .sectionImage img {
-    width: 41%;
-  }
-
-  .sectionTitle {
+  .sectionBannerPresentation {
     text-align: center;
     justify-content: center;
   }
@@ -121,9 +109,6 @@ h1 {
 }
 
 @media (max-width: 550px) {
-  .sectionImage img {
-    width: 60%;
-  }
 
   h1 {
     font-size: 25px;
