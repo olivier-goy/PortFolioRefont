@@ -20,7 +20,6 @@
   height: 180px;
   background-image: url("../../Assets/neon-wave-banner-v2.svg");
   background-repeat: no-repeat;
-  background-position: bottom left;
   background-size: 100% 100%;
 }
 
@@ -34,7 +33,6 @@
   background-image: url("../../Assets/waves.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: bottom center;
 }
 
 .bannerGreeting {
