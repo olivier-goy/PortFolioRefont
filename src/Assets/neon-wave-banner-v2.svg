@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180" fill="none">
+<defs>
+<linearGradient id="neon" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#E040FB"/><stop offset=".22" stop-color="#D18AFF"/><stop offset=".48" stop-color="#A448F3" stop-opacity=".8"/><stop offset=".8" stop-color="#9649DF" stop-opacity=".2"/><stop offset="1" stop-color="#9649DF" stop-opacity="0"/></linearGradient>
+<filter id="halo" x="-20%" y="-100%" width="140%" height="300%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
+<filter id="glow" x="-20%" y="-100%" width="140%" height="300%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4"/></filter>
+<path id="a" d="M-8 12 C105 160 185 170 320 142 S485 99 570 145 S735 165 910 133"/>
+<path id="b" d="M-8 62 C105 102 177 179 320 142 S485 145 570 145 S735 105 910 133"/>
+</defs>
+<g stroke="url(#neon)" stroke-width="26" opacity=".55" filter="url(#halo)"><use href="#a"/><use href="#b"/></g>
+<g stroke="url(#neon)" stroke-width="7" opacity=".85" filter="url(#glow)"><use href="#a"/><use href="#b"/></g>
+<use href="#a" stroke="url(#neon)" stroke-width="2.4"/><use href="#b" stroke="url(#neon)" stroke-width="1.5" opacity=".8"/>
+</svg>
