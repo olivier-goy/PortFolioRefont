@@ -2,8 +2,10 @@
 /* import { faArrowDown } from "@fortawesome/free-solid-svg-icons"; */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons"
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import cv from "../../Assets/CV_Olivier_GOY_Développeur_Fullstack.pdf";
+import { ReactComponent as GitHub } from "../../Assets/github.svg";
+import { ReactComponent as Linkedin } from "../../Assets/linkedin.svg";
 import "./Banner.css";
 
 function Presentation() {
@@ -81,6 +83,22 @@ function Presentation() {
           <a href={cv} target="_blank" rel="noreferrer" className="btnCV">
             <FontAwesomeIcon icon={faDownload} />
             Mon CV
+          </a>
+        </div>
+        <div className="bannerLinkSocial">
+          <a
+            href="https://github.com/olivier-goy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GitHub className="socialIcon"/>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/olivier-goy/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin className="socialIcon"/>
           </a>
         </div>
       </div>

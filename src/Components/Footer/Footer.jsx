@@ -1,7 +1,7 @@
 import "./Footer.css";
 import logoEmail from "../../Assets/e-mail.png";
-import logoGithub from "../../Assets/logoGithub.png";
-import logoLinkedin from "../../Assets/logoLinkedin.png";
+import logoGithub from "../../Assets/github.svg";
+import logoLinkedin from "../../Assets/linkedin.svg";
 
 function Footer() {
     return (
