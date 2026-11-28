@@ -1,5 +1,4 @@
-/* import { useState, useEffect } from "react"; */
-/* import { faArrowDown } from "@fortawesome/free-solid-svg-icons"; */
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -9,55 +8,30 @@ import { ReactComponent as Linkedin } from "../../Assets/linkedin.svg";
 import "./Banner.css";
 
 function Presentation() {
-  /*  const lines = [
-    "Bonjour et bienvenue,",
-    "Je suis Olivier GOY",
-    "Développeur web Fullstack",
-  ];
+  const textDescription = "Je conçois des applications web modernes, performantes et ergonomiques, du front-end au back-end.";
 
-  const [text, setText] = useState("");
-  const [lineIndex, setLineIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
+  const [isTypingText, setTypingText] = useState("");
+  const [isShowCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-  let timeout;
+    let index = 0;
+    let timeout;
 
-  const type = () => {
-    if (lineIndex >= lines.length) return;
+    const interval = setInterval(() => {
+      index++;
+      setTypingText(textDescription.slice(0, index));
 
-    const currentLine = lines[lineIndex];
-    const currentChar = currentLine.charAt(charIndex);
+      if (index >= textDescription.length) {
+        clearInterval(interval);
 
-    
-    const color = lineIndex === 0 ? "black" : "gray";
-
-    setText(
-      (prev) => prev + `<span style="color:${color}">${currentChar}</span>`
-    );
-
-    let nextLineIndex = lineIndex;
-    let nextCharIndex = charIndex + 1;
-
-    if (nextCharIndex >= currentLine.length) {
-      nextCharIndex = 0;
-      nextLineIndex += 1;
-
-      if (nextLineIndex < lines.length) {
-        setText((prev) => prev + "<br />");
+        timeout = setTimeout(() => {
+          setShowCursor(false);
+        }, 4000);
       }
-    }
+    }, 50);
 
-    timeout = setTimeout(() => {
-      setLineIndex(nextLineIndex);
-      setCharIndex(nextCharIndex);
-    }, 30);
-  };
-
-    timeout = setTimeout(type, 30);
-
-    return () => clearTimeout(timeout);
-    // eslint-disable-next-line
-  }, [lineIndex, charIndex]); */
+    return () => {clearInterval(interval); clearTimeout(timeout)};
+  }, [textDescription]);
 
   return (
     <div className="banner">
@@ -68,16 +42,16 @@ function Presentation() {
             Olivier <span className="bannerLastName">GOY</span>
           </span>
           <span className="bannerJob">Développeur logiciel & web</span>
-          {/* <span dangerouslySetInnerHTML={{ __html: text }}></span>
-            <span className="cursor">|</span> */}
         </h1>
         <p className="bannerDescription">
-          Je conçois des applications web modernes, performantes et
-          ergonomiques, du front-end au back-end.
+          {isTypingText}
+          {isShowCursor && (
+            <span className="typingCursor">|</span>
+          )}
         </p>
         <div className="bannerLink">
           <a href="mailto:contact@oliviergoy.dev" className="btnContact">
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} className="iconContact" />
             Me contacter
           </a>
           <a href={cv} target="_blank" rel="noreferrer" className="btnCV">
@@ -91,14 +65,14 @@ function Presentation() {
             target="_blank"
             rel="noreferrer"
           >
-            <GitHub className="socialIcon"/>
+            <GitHub className="socialIcon" />
           </a>
           <a
             href="https://www.linkedin.com/in/olivier-goy/"
             target="_blank"
             rel="noreferrer"
           >
-            <Linkedin className="socialIcon"/>
+            <Linkedin className="socialIcon" />
           </a>
         </div>
       </div>
