@@ -1,0 +1,35 @@
+.realization {
+    padding: 0 100px;
+    text-align: center;
+}
+
+.realization h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.realization h2::before,
+.realization h2::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+}
+
+.realization h2::before {
+    background: linear-gradient(to right, #9649DF);
+}
+
+.realization h2::after {
+    background: linear-gradient(to left, #9649DF);
+}
+
+.realizationIconCode {
+    color: #9649DF;
+    font-size: 55px;
+}
+.realizationDescription {
+    color: #251343;
+    font-size: 22px;
+}

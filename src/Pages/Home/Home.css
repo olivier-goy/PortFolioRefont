@@ -23,16 +23,9 @@
   padding: 0 15%;
   display: flex;
 }
-.sectionRealization h2 {
-  text-align: center;
-  padding-top: 80px;
-}
 
 @media (max-width: 1250px) {
   .skillSection h2 {
-    font-size: 40px;
-  }
-  .sectionRealization h2 {
     font-size: 40px;
   }
 }
@@ -40,9 +33,6 @@
   .skillSection h2 {
     font-size: 35px;
     padding-top: 70px;
-  }
-  .sectionRealization h2 {
-    font-size: 35px;
   }
 }
 @media (max-width: 700px) {
@@ -55,8 +45,5 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
     padding-bottom: 40px;
-  }
-  .sectionRealization h2 {
-    font-size: 40px;
   }
 }

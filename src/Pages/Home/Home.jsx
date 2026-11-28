@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import "./Home.css";
-import CarouselProject from "../../Components/Carousel/CarouselProject/CarouselProject";
 import Banner from "../../Components/Banner/Banner";
 import Skill from "../../Components/Skill/Skill";
 import About from "../../Components/About/About";
+import Realization from "../../Components/Realization/Realization";
 
 function Home() {
   const [isDataLoading, setIsDataLoading] = useState(false);
@@ -50,10 +50,7 @@ function Home() {
 
       <section id="realizations">
         {isDataLoading && (
-          <div className="sectionRealization">
-            <h2>MES REALISATIONS</h2>
-            <CarouselProject realizations={isRealizationData} />
-          </div>
+            <Realization realizations={isRealizationData}/>
         )}
       </section>
 
